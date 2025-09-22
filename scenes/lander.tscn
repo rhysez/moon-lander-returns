@@ -2,10 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b6aihdsjg051r" path="res://assets/lander/lander.png" id="1_kx23b"]
 
-[node name="Lander" type="Node2D"]
-
-[node name="Lander" type="Sprite2D" parent="."]
+[node name="Lander" type="Sprite2D"]
 texture_filter = 1
-position = Vector2(4, 0.9999981)
-scale = Vector2(4.3007813, 4.4785156)
+position = Vector2(0, -1)
+scale = Vector2(6.440391, 6.2792583)
 texture = ExtResource("1_kx23b")

@@ -5,9 +5,16 @@ const ROTATION_SPEED: float = 80
 var rotation_direction: float = 0
 var thrust = Vector2(0, -450)
 
+@onready var sprite: Sprite2D = %Lander
+const SPRITE_IDLE = preload("res://assets/lander/lander.png")
+const SPRITE_THRUSTING = preload("res://assets/lander/lander-thrust.png")
+
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if Input.is_action_pressed("thrust"):
 		state.apply_force(thrust.rotated(rotation))
+		sprite.texture = SPRITE_THRUSTING
+	else:
+		sprite.texture = SPRITE_IDLE
 	
 	if Input.is_action_pressed("tilt_right"):
 		rotation_direction += 2
