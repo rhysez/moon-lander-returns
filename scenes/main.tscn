@@ -25,6 +25,8 @@ texture = ExtResource("1_o5qli")
 
 [node name="Player" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(565, 352)
+contact_monitor = true
+max_contacts_reported = 2
 
 [node name="MoonSurface" parent="." instance=ExtResource("3_sugp2")]
-position = Vector2(-3, 600)
+position = Vector2(0, 599)

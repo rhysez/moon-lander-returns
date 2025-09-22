@@ -24,8 +24,7 @@ position = Vector2(0.9999962, 1)
 scale = Vector2(1.4, 1.385)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(1, -15)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_3vyb7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
