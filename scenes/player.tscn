@@ -7,7 +7,7 @@
 radius = 26.172504
 
 [node name="Player" type="RigidBody2D"]
-gravity_scale = 0.2
+gravity_scale = 0.18
 script = ExtResource("1_g2els")
 
 [node name="Lander" parent="." instance=ExtResource("1_3vyb7")]

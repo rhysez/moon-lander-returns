@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-const TORQUE: float = 20000
-const ROTATION_SPEED: float = 1.5
+const TORQUE: float = 100
+const ROTATION_SPEED: float = 80
 var rotation_direction: int = 0
 var thrust = Vector2(0, -450)
 
@@ -11,4 +11,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if Input.is_action_pressed("thrust"):
 		state.apply_force(thrust.rotated(rotation))
 	
-	rotation_direction = Input.get_axis("tilt_left", "tilt_right")
+	if Input.is_action_pressed("tilt_right"):
+		rotation_direction += 1
+	if Input.is_action_pressed("tilt_left"):
+		rotation_direction -= 1
+	
+	state.apply_torque(rotation_direction * TORQUE)
