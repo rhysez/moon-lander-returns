@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm3n24vdxv7hu"]
+[gd_scene load_steps=7 format=3 uid="uid://dm3n24vdxv7hu"]
 
 [ext_resource type="Texture2D" uid="uid://bdpd64xkuiuug" path="res://assets/background/stars.png" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://no3xqbt6wf7c" path="res://scripts/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://75838nv383r" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dnaf15rdumj24" path="res://scenes/moon_surface.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dbh8hsl24hrgm" path="res://scenes/landing_site.tscn" id="4_jyhfs"]
 
 [sub_resource type="Curve2D" id="Curve2D_jyhfs"]
 _data = {
@@ -46,3 +47,17 @@ curve = SubResource("Curve2D_jyhfs")
 unique_name_in_owner = true
 position = Vector2(1, 600)
 rotation = 0.00086805533
+
+[node name="VelocityLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 28.0
+offset_top = 15.0
+offset_right = 145.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 14
+text = "Velocity: N"
+
+[node name="LandingSite" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(520, 597)
+
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]

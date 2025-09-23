@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bhlx28wcrhiwq" path="res://assets/surface/moon-surface.png" id="1_3k0x1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0or4"]
-size = Vector2(1153, 219)
+size = Vector2(1153, 217)
 
 [node name="MoonSurface" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(576.5, 109.5)
+position = Vector2(576.5, 110.5)
 shape = SubResource("RectangleShape2D_x0or4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
