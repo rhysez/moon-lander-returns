@@ -31,3 +31,4 @@ func _on_body_entered(body: Node) -> void:
 		body.has_won(l_velocity, self)
 	else:
 		queue_free()
+		get_tree().current_scene.get_node("%WinLossLabel").text = "You ate lunar rocks!"

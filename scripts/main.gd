@@ -1,5 +1,12 @@
 extends Node2D
 
+#func _on_game_result(result: String) -> void:
+	#match result:
+		#"win":
+			#%WinLossLabel.text = "One big leap for humanity!"
+		#"loss":
+			#%WinLossLabel.text = "You ate lunar rocks!"
+
 func _ready():
 	spawn_landing_site()
 
